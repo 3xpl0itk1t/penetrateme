@@ -1,7 +1,7 @@
 <?php
 include 'config.php';
-$uname=$connection.$_POST["username"];
-$pass=$connection.$_POST["password"];
+$uname=$connection,$_POST["username"];
+$pass=$connection,$_POST["password"];
 session_start();
 $_SESSION['uname'] = $uname;
 
