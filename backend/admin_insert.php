@@ -1,8 +1,8 @@
 <?php
 include 'config.php';
-$uname=$connection,$_POST["username"];
-$email=$connection,$_POST["email"];
-$balance=$connection,$_POST["balance"];
+$uname=mysqli_escape_string($connection,$_POST["username"]);
+$email=mysqli_escape_string($connection,$_POST["email"]);
+$balance=mysqli_escape_string($connection,$_POST["balance"]);
 
 $sql='select * from users where username="'.$uname.'";';
 $rs=mysqli_Query($connection,$sql);
